@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEST</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript" src="myValidateData.js"></script>
+    <link rel="stylesheet" type="text/css" href="myValidateData.css">
+</head>
+
+<body>
+    <div class="form_div">
+        <form class="mainform" id="formValidate" method="POST">
+            <div>
+                <label>Username</label>
+                <input type="text" name="username" class="fieldRequired" />
+            </div>
+            <div>
+                <label>Phone No.</label>
+                <input type="text" name="phoneno" class="fieldRequired numberRequired" />
+            </div>
+            <div>
+                <label>Email Id</label>
+                <input type="text" name="email" class="fieldRequired emailRequired" />
+            </div>
+            <div>
+                <label>Remarks </label>
+                <textarea name="remarks" placeholder="Add your remarks here" class="textRequired"></textarea>
+            </div>
+            <div>
+                <label>Why you join us? </label>
+                <textarea name="why_join_us" placeholder="Add your answer here" class="fieldRequired"></textarea>
+            </div>
+            <div>
+                <label>Select 1 Car</label>
+                <select name="cars" class="optionRequired">
+                    <option value="">--select--</option>
+                    <option value="volvo">Volvo</option>
+                    <option value="saab">Saab</option>
+                    <option value="mercedes">Mercedes</option>
+                    <option value="audi">Audi</option>
+                </select>
+            </div>
+            <div>
+                <label>Select 2 car</label>
+                <select name="cars2" class="optionRequired">
+                    <option value="">--select--</option>
+                    <option value="volvo">Volvo</option>
+                    <option value="saab">Saab</option>
+                    <option value="mercedes">Mercedes</option>
+                    <option value="audi">Audi</option>
+                </select>
+            </div>
+            <div>
+                <label>Select Gender</label>
+                <div class="radiobuttonRequired">
+                    <label><input type="radio" name="gender" value="male">
+                        Male</label>
+                    <label><input type="radio" name="gender" value="female">
+                        Female</label>
+                    <label><input type="radio" name="gender" value="other">
+                        Other</label>
+                </div>
+            </div>
+
+            <div>
+                <label>Select Choice</label>
+                <div class="radiobuttonRequired">
+                    <label><input type="radio" name="choice" value="yes">
+                        Yes</label>
+                    <label><input type="radio" name="choice" value="no">
+                        No</label>
+                </div>
+            </div>
+
+            <div>
+                <label>Select Social Media</label>
+                <div class="checkboxRequired">
+                    <label><input type="checkbox" name="social_media" value="Facebook">
+                        Facebook</label>
+                    <label><input type="checkbox" name="social_media" value="Instagram">
+                        Instagram</label>
+                    <label><input type="checkbox" name="social_media" value="Google+">
+                        Google+</label>
+                    <label><input type="checkbox" name="social_media" value="Others">
+                        Others</label>
+                </div>
+            </div>
+            <div>
+                <label>Select Profession</label>
+                <div class="checkboxRequired">
+                    <label><input type="checkbox" name="profession" value="Student">
+                        Student</label>
+                    <label><input type="checkbox" name="profession" value="Teacher">
+                        Teacher</label>
+                    <label><input type="checkbox" name="profession" value="Administrator">
+                        Administrator</label>
+                    <label><input type="checkbox" name="profession" value="Others">
+                        Others</label>
+                </div>
+            </div>
+
+            <div>
+                <label>Select Choice 1</label>
+                <div class="radiobuttonRequired">
+                    <label><input type="radio" name="choice1" value="yes">
+                        Yes</label>
+                    <label><input type="radio" name="choice1" value="no">
+                        No</label>
+                </div>
+            </div>
+            <div>
+                <label>Select Social Media</label>
+                <div class="checkboxRequired">
+                    <label><input type="checkbox" name="social_media2" value="Facebook">
+                        Facebook</label>
+                    <label><input type="checkbox" name="social_media2" value="Instagram">
+                        Instagram</label>
+                    <label><input type="checkbox" name="social_media2" value="Google+">
+                        Google+</label>
+                    <label><input type="checkbox" name="social_media2" value="Others">
+                        Others</label>
+                </div>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        var allForm = document.getElementById("formValidate");
+        //#onSubmit button
+        document.getElementById("formValidate").onsubmit = function (e) {
+            e.preventDefault();
+            myValidateData.dataValidate(
+                allForm,
+                error = {
+                    username: {
+                        error: "Username error"
+                    },
+                    phoneno: {
+                        error: "phone no error"
+                    },
+                    profession: {
+                        error: "profession error"
+                    },
+                    cars2: {
+                        error: "car 2 error"
+                    },
+                    remarks: {
+                        error: "remarks error"
+                    },
+                    gender: {
+                        error: "gender error"
+                    },
+                    choice1: {
+                        error: "choice1 error"
+                    },
+                    social_media2: {
+                        error: "social_media2 error"
+                    }
+                });
+        };
+    </script>
+
+
+
+</body>
+
+</html>

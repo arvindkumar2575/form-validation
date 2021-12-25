@@ -1,0 +1,10 @@
+/* for input boxes for type="text",'email"," */
+.validation_error {
+    box-shadow: 0px 0px 5px;
+}
+
+span.error_value {
+    padding-top: 5px;
+    color: #ff0000;
+    font-size: 14px;
+}

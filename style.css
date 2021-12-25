@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    box-sizing: border-box;
+}
+
+.form_div {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    width: 18em;
+    height: max-content;
+    margin-top: -9em;
+    margin-left: -9em;
+    border: 1px solid #ccc;
+    background-color: #f3f3f3;
+}
+
+
+
+.mainform {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    margin: 10px;
+    padding: 5px;
+}
+
+.mainform input,
+textarea,
+select,
+button {
+    padding: 5px;
+    border-radius: 5px;
+    border: 0.5px solid black;
+}
+
+.mainform * {
+    outline: none;
+}
+
+.mainform>div {
+    display: grid;
+}
+
+
+.mainform textarea {
+    padding: 5px;
+}
+
+
+.mainform button {
+    padding: 10px;
+}
+
+.mainform select {
+    padding: 5px;
+    width: 100%;
+}
